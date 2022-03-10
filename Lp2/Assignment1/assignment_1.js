@@ -124,5 +124,5 @@ adjMatrix(4, 2);
 adjMatrix(2, 5);
 adjMatrix(5, 4);
 
-breadthFirstSearch(1, 4);
-// depthFirstSearch(1, 3);
+// breadthFirstSearch(1, 6);
+depthFirstSearch(1, 6);
