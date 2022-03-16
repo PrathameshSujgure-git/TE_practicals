@@ -3,6 +3,11 @@
   <head>
     <link rel="stylesheet" href="main.css" />
     <title>Desilicious | Home</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/favicon_io/favicon.ico"
+    />
   </head>
   <body>
     <div class="main-bg">
@@ -15,7 +20,7 @@
         </a>
         <div class="nav-right">
           <a href="index.html"><h2>Home</h2></a>
-          <a href="#menu"><h2>Menu</h2></a>
+          <button href="#menu" onclick="myFunction('menu-drop')">Menu</button>
           <a href="#about"><h2>About</h2></a>
           <a href="#contact"><h2>Contact</h2></a>
         </div>
@@ -35,7 +40,7 @@
       <div class="main-2">
         <div id="menu" class="about hover">
           <h1>MENU</h1>
-          <div class="about-drop hover-drop">
+          <div id="menu-drop" class="about-drop hover-drop">
             <div class="menu-sub">
               <div class="menu-sub-sub">
                 <div>
@@ -203,5 +208,10 @@
         </div>
       </div>
     </div>
+    <script>
+      function myFunction(element) {
+        document.getElementById(element).style.display = "block";
+      }
+    </script>
   </body>
 </html>
