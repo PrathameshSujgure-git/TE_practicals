@@ -2,23 +2,55 @@
 #include<tuple> 
 #include<vector>
 #include<algorithm>
+#include<cstring>
 
 using namespace std;
+vector<tuple<int, int, int>> vert;
+vector<tuple<int, int, int>> answer;
+int nodes, edges, dist,cost=0;
+int cycle[20];
+
+int checkparent(int a){
+	if(cycle[a]==-1)
+	checkparent(cycle[a]);
+	return a;
+}
+bool dsu(int a, int b)
+{
+   if(checkparent(a)==checkparent(b))return false;
+   else{
+    cycle[checkparent(b)]=checkparent(a);
+    return true;
+   }
+}
+void mst()
+{
+    int curr = 0;
+    int done = 0;
+    while (done < nodes - 1)
+    {
+        auto tem = vert[curr];
+        if (dsu(get<1>(tem), get<2>(tem)))
+        {
+            answer.push_back(make_tuple(get<1>(tem), get<2>(tem), get<0>(tem)));
+            done++;
+        }
+        curr++;
+    }
+}
 
 int main()
 {
-	vector< tuple<int, int, int> > vert;
+    memset(cycle, -1, sizeof(cycle));
 
-	int nodes;
-	int vertices;
 	cout<<"Enter no. of nodes: " ;
 	cin>>nodes;
 	cout<<"Enter no. of vertices: ";
-	cin>>vertices;
+	cin>>edges;
 
 	int src, dest, wt;
 	int srcn, destn;
-	while (vertices){
+	while (edges){
 		cout<<"Enter the vertices: ";
 		cin>>src>>dest;
 		src = src;
@@ -45,7 +77,7 @@ int main()
 		cout<<"Enter Weight for "<<src<<" - "<< dest<<": ";
 		cin>>wt;
 		vert.push_back(make_tuple(wt, src, dest));
-		vertices--;
+		edges--;
 	}
 
 	cout<<"----UnSorted----"<<"\n";
@@ -68,23 +100,12 @@ int main()
              << get<2>(vert[i]) << " " 
              << get<0>(vert[i]) << "\n";
 	} 
-
-	// cout<<get<0>(vert[0]);
-
-	   
-
-
-
-	// cout << "The initial values of tuple are : ";
-	// cout << get<0>(vert) << " " << get<1>(vert);
-	// cout << " " << get<2>(vert) << endl;
-
-	// get<0>(vert) = 'b';
-	// get<2>(vert) = 20.5;
-
-	// cout << "The modified values of tuple are : ";
-	// cout << get<0>(vert) << " " << get<1>(vert);
-	// cout << " " << get<2>(vert) << endl;
-
-	return 0;
+    mst();
+    
+    for (int i = 0; i < answer.size(); i++)
+    {
+        auto tem = answer[i];
+        cost+=get<2>(tem);
+    }
+	cout<<"Cost of mst: "<<cost<<"\n";
 }
