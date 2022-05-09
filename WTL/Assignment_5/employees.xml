@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="main.css"?>
+
+<!DOCTYPE Employee_Info [
+    <!ELEMENT Employee_Info (Employee+)>
+    <!ELEMENT Employee (Block)>
+    <!ELEMENT Block (Name, Department, Phone, Email)> 
+    <!ATTLIST Employee Employee_Number CDATA #REQUIRED>
+    <!ELEMENT Name (#PCDATA)>
+    <!ELEMENT Department (#PCDATA)>
+    <!ELEMENT Phone (#PCDATA)>
+    <!ELEMENT Email (#PCDATA)>
+]>
+
+<Employee_Info>
+  <Employee  Employee_Number="101">
+      <Block>  
+        <Name>Prathamesh Sujgure</Name>
+        <Department>Development Department</Department>
+        <Phone>Contact No.: 8308335062</Phone>
+        <Email>Email: prathameshsujgure@gmail.com</Email>
+      </Block>
+  </Employee>
+  <Employee  Employee_Number="102">
+    <Block>    
+      <Name>Shreyas Gangurde</Name>
+      <Department>Development Department</Department>
+      <Phone>Contact No.: 8605984335</Phone>
+      <Email>Email: shreyasbgangurde@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="103">
+    <Block> 
+      <Name>Atharva Bhange</Name>
+      <Department>Sales Department</Department>
+      <Phone>Contact No.: 9876543210</Phone>
+      <Email>Email: atharva.bhange@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="104">
+    <Block>   
+      <Name>Prem Pagare</Name>
+      <Department>Social Department</Department>
+      <Phone>Contact No: 9545566411</Phone>
+      <Email>Email: prempagare@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="105"> 
+    <Block>
+      <Name>Gaurav Tajanpure</Name>
+      <Department>Sales Department</Department>
+      <Phone>Contact No: 9876543210</Phone>
+      <Email>Email: gauravtajanpure@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="106">
+    <Block>    
+      <Name>Suyam Chaturvedi</Name>
+      <Department>Product Department</Department>
+      <Phone>Contact No: 9876543213</Phone>
+      <Email>Email: suyamchaturvedi@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="107">
+    <Block> 
+      <Name>Chetan Gamne</Name>
+      <Department>Product Department</Department>
+      <Phone>Contact No: 9588601697</Phone>
+      <Email>Email: chetangamne@gmail.com</Email>
+    </Block>
+  </Employee>
+  <Employee  Employee_Number="108">
+    <Block> 
+      <Name>Gordon Wumpus</Name>
+      <Department>CEO</Department>
+      <Phone>Contact No: -</Phone>
+      <Email>Email: wumpus@3rdfloor.com</Email>
+    </Block>
+  </Employee>
+</Employee_Info>

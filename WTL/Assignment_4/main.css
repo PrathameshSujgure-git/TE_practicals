@@ -1,0 +1,133 @@
+* {
+  font-family: monospace;
+}
+body {
+  background-color: #d9fffb;
+}
+
+label {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.input-grp {
+  display: flex;
+  margin: 1rem 0;
+  width: 210px;
+  height: 3rem;
+  justify-content: center;
+}
+.input-grp input {
+  width: 100%;
+}
+
+.keypad-wrapper {
+  justify-content: center;
+  display: flex;
+}
+.primary-btn {
+  display: flex;
+  margin: 1rem;
+  font-size: 1.5rem;
+  background-color: grey;
+  border-radius: 5px;
+  height: 2.3rem;
+}
+
+.numK {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+  /* background-color: grey; */
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.num,
+.op {
+  height: 100%;
+  width: 100%;
+  background-color: #969696;
+  border-style: outset;
+}
+
+.opK {
+  display: inline-flex;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+  height: 50px;
+  width: 50px;
+  /* background-color: grey; */
+  cursor: pointer;
+}
+
+.calculateBtnK {
+  display: inline-flex;
+  font-size: 2rem;
+  /* line-height: 0.5rem; */
+  text-align: center;
+  padding-top: 10px;
+  width: 105px;
+  /* background-color: grey; */
+  height: 50px;
+  cursor: pointer;
+}
+.calculateBtn {
+  height: 100%;
+  width: 100%;
+  background-color: #969696;
+  border-style: outset;
+}
+.row {
+  margin-top: 5px;
+}
+
+.ans {
+  border: 2px solid #00d111;
+  color: #00d111;
+  border-radius: 5px;
+  margin: 1rem 0;
+  background-color: white;
+
+  height: 3rem;
+  font-size: 2rem;
+  width: 210px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backSpaceKeyK {
+  margin: 5px 0 0px 5px;
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+  height: 100%;
+  width: 50px;
+  /* background-color: grey; */
+  cursor: pointer;
+  height: 255px;
+}
+.backSpaceKey {
+  width: 100%;
+  height: 100%;
+  background-color: #969696;
+  border-style: outset;
+}
+.pressed {
+  background-color: grey;
+  transform: scale(95%);
+}
+.num:hover,
+.op:hover,
+.backSpaceKey:hover,
+.calculateBtn:hover {
+  background-color: grey;
+  transform: scale(95%);
+}

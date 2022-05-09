@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
+
+Employee_Info {
+  background-color: #483d21;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+Block {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background-color: #c5c96b;
+}
+Employee {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #c5c96b;
+}
+Name {
+  font-family: "Square Peg", cursive;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+}
+Department {
+  margin-top: 3px;
+  font-family: monospace;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+Phone {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: monospace;
+}
+Email {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-family: monospace;
+}

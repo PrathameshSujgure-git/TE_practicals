@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalcoolater | काळकुळेटर</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <center>
+      <h1>Calculator</h1>
+
+      <div class="input-grp">
+        <input type="text" id="term" placeholder="Enter Here" autofocus />
+      </div>
+
+      <div class="keypad-wrapper">
+        <div>
+          <div class="row">
+            <div class="numK" id="7"><div class="num" id="Numpad7">7</div></div>
+            <div class="numK" id="8"><div class="num" id="Numpad8">8</div></div>
+            <div class="numK" id="9"><div class="num" id="Numpad9">9</div></div>
+            <div class="opK" id="+"><div class="op" id="NumpadAdd">+</div></div>
+          </div>
+          <div class="row">
+            <div class="numK" id="4"><div class="num" id="Numpad4">4</div></div>
+            <div class="numK" id="5"><div class="num" id="Numpad5">5</div></div>
+            <div class="numK" id="6"><div class="num" id="Numpad6">6</div></div>
+            <div class="opK" id="-">
+              <div class="op" id="NumpadSubtract">-</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="numK" id="1">
+              <div class="num" id="Numpad1">1</div>
+            </div>
+            <div class="numK" id="2">
+              <div class="num" id="Numpad2">2</div>
+            </div>
+            <div class="numK" id="3">
+              <div class="num" id="Numpad3">3</div>
+            </div>
+            <div class="opK" id="*">
+              <div class="op" id="NumpadMultiply">*</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="calculateBtnK">
+              <div class="calculateBtn" id="Enter">=</div>
+            </div>
+            <div class="numK" id="0">
+              <div class="num" id="Numpad0">0</div>
+            </div>
+            <div class="opK" id="/">
+              <div class="op" id="NumpadDivide">/</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="backSpaceKeyK">
+          <div class="backSpaceKey" id="Backspace">&#8592;</div>
+        </div>
+      </div>
+      <div class="ans" id="ansDiv"></div>
+    </center>
+
+    <script src="script.js"></script>
+  </body>
+</html>
